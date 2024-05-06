@@ -1,11 +1,11 @@
 "use client"
 import styles from "@/app/page.module.css";
-import { useContext, useState } from "react";
-import  {Themecontext}  from "@/context/themcontext";
+import { Themecontext } from "@/context/themcontext";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Logo from "/public/images/logo.png"
-import Image from "next/image";
+import { useContext } from "react";
+import Logo from "/public/images/logo.png";
 
 export default function Header() {
 const {mode, toggle,resnav,resbar,resdiv,pages }=useContext(Themecontext);

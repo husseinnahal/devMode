@@ -38,6 +38,7 @@ a {
 .light{
 /* background:linear-gradient(rgba(79, 235, 249, 0.2),white); */
 background:linear-gradient(#4782f733,white);
+
 /* background: radial-gradient(ellipse, rgba(59, 122, 249, 0.2), transparent); */
 color:var(--color-dark);
 transition: 0.5s;
