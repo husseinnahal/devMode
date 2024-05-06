@@ -4,9 +4,9 @@ import { useState } from "react";
 import styles from "./page.module.css";
 
 
-export default function contact() {
+export default function Contact() {
 
-  const [form,setform]=useState({
+  const [form,setForm]=useState({
     Name:"",
     Email:"",
     Message:"",
@@ -14,7 +14,7 @@ export default function contact() {
 
     
     function handle(e){
-      setform({...form,[e.target.name]:e.target.value})
+      setForm({...form,[e.target.name]:e.target.value})
       };
 
       async function submitt(e){
@@ -35,7 +35,7 @@ export default function contact() {
     <div className={styles.contact}>
   <div className={styles.desc}>
   <h2 className={styles.title}>CONTACT US</h2>
-  <p className={styles.para}>Have questions, ideas, or projects in mind? Let's connect! Get in touch with us &
+  <p className={styles.para}>Have questions, ideas, or projects in mind? Lets connect! Get in touch with us &
 send us message today!</p>
   <svg width="450" height="341" viewBox="0 0 643 341" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.illustration}>
     <path d="M1 266.029C20.7403 294.543 41.905 329.76 78.2222 336.807C112.733 343.503 148.55 339.253 181.556 327.918C208.248 318.751 251.36 297.749 253.667 264.474C257.205 213.415 131.128 245.757 182.667 302.918C208.118 331.146 252.556 339.327 288.556 333.474C336.092 325.744 376.219 302.162 419 282.029" stroke="var(--color-icon)" strokeWidth="1"  strokeLinecap="round" />

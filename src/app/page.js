@@ -56,7 +56,7 @@ export default function Home() {
       <Team />
 
       <div className={styles.buildsomething}>
-        <h1 className={styles.title}>Let's Build Something Exception </h1>
+        <h1 className={styles.title}>Lets Build Something Exception </h1>
         <Link href="/contact" className={styles.getstarted}>
           Get Started{" "}
         </Link>

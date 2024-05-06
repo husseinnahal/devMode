@@ -3,46 +3,40 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import styles from "./page.module.css";
 
-
-export default function services() {
-  
-const pathname = usePathname();
-const [title,settitle]=useState("a");
-const [cards,setcards]=useState("a");
-
-
-
-
+export default function Services() {
+  const pathname = usePathname();
+  const [titleClass, setTitleClass] = useState("a");
+  const [cardsClass, setCardsClass] = useState("a");
 
   const elementRef = useRef(null);
-  if (pathname==="/"){
-  useEffect(() => {
-    if (elementRef.current) {
-      const offsetTop = elementRef.current.offsetTop;
-  
-      window.addEventListener("scroll",()=>{
-        if(window.scrollY>=offsetTop-(offsetTop/3)){
- settitle("animate__animated animate__fadeInDown");
-  setcards("animate__animated animate__bounceIn");
-        }
-      })
-  
-    }
-  }, []);
-  }
-  
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (elementRef.current) {
+        const offsetTop = elementRef.current.offsetTop;
+        if (window.scrollY >= offsetTop - offsetTop / 3) {
+          setTitleClass("animate__animated animate__fadeInDown");
+          setCardsClass("animate__animated animate__bounceIn");
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
 
   return (
     <div className={styles.main}>
       
 <div className={styles.ourservices} ref={elementRef}>
-<div className={title}  style={{opacity:`${title==="a" && pathname!="/services"? "0" :"1"}`}}>
+<div className={titleClass}  style={{opacity:`${titleClass==="a" && pathname!="/services"? "0" :"1"}`}}>
 <h1 className={styles.title}>OUR SERVICES</h1>
 </div>
 
-<div  className={cards} style={{opacity:`${cards==="a" && pathname!="/services"? "0" :"1"}`}}>
+<div  className={cardsClass} style={{opacity:`${cardsClass==="a" && pathname!="/services"? "0" :"1"}`}}>
 <div className={styles.services}>
 
 <div className={styles.card}> 

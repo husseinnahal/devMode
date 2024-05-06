@@ -14,9 +14,9 @@ import { Pagination } from 'swiper/modules';
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
-export default function team() {
+export default function Team() {
 const pathname = usePathname();
-const [title,settitle]=useState("a");
+const [title,setTitle]=useState("a");
 
 
 

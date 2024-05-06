@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import Logo from "/public/images/logo.png"
 import Image from "next/image";
 
-export default function header() {
+export default function Header() {
 const {mode, toggle,resnav,resbar,resdiv,pages }=useContext(Themecontext);
 
 const pathname = usePathname();
