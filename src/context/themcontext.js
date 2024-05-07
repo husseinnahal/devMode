@@ -1,18 +1,18 @@
 "use client"
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 
 export const Themecontext=createContext();
 
 
 export default function Themcontext({children}){
-const [mode, setmode]=useState('dark');
-const [resbar,setresbar]=useState("bar");
-const [resdiv,setresdiv]=useState("lists");
+const [mode, setMode]=useState('dark');
+const [resbar,setResbar]=useState("bar");
+const [resdiv,setResdiv]=useState("lists");
 
 
 
 const toggle=()=>{               
-setmode(prev=> prev=="light"? "dark":"light");
+setMode(prev=> prev=="light"? "dark":"light");
 
 
 if (mode=="light") {
@@ -31,26 +31,26 @@ if (mode=="light") {
 const resnav = () => {
 if(resbar=="bar")
 {
-setresbar("responsiveheader");
-setresdiv("reslist");
+setResbar("responsiveheader");
+setResdiv("reslist");
 
 }
 else{
-  setresbar("bar");
-  setresdiv("lists");
+  setResbar("bar");
+  setResdiv("lists");
 
 }
 };
 
 const pages = () => {
-    setresbar("bar");
-    setresdiv("lists");
+    setResbar("bar");
+    setResdiv("lists");
 
 }
 
 
 return (
-    <Themecontext.Provider value={{ mode, toggle,resnav,resbar,resdiv,pages }}>
+    <Themecontext.Provider value={{ mode, toggle ,resnav,resbar,resdiv,pages }}>
     <div className={` ${mode}`} >
 
     {children}
