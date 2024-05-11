@@ -12,9 +12,6 @@ const {mode, toggle,resnav,resbar,resdiv,pages }=useContext(Themecontext);
 
 const pathname = usePathname();
 
-
-
-
   return (
 <div className={styles.mainheader}> 
 <div className={styles.header} >

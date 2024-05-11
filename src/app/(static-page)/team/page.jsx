@@ -15,8 +15,6 @@ import { Pagination } from 'swiper/modules';
 export default function Team() {
 
 
-
-
   return (
     <div className={styles.main} >
 

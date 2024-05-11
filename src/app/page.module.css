@@ -13,13 +13,12 @@
       display: flex;
       align-items: center;
     }
-    .clicks {
-      display: flex;
-      align-items: center;
-      .lists {
+  }}
+  
+      .lists ,.reslist{
         display: flex;
         align-items: center;
-        .mode {
+        .mode{
           display: flex;
           border: 2px solid var(--color-main);
           font-size: 22px;
@@ -46,41 +45,6 @@
             transition: 0.3s;
           }
 
-          .lii:hover {
-            color: var(--color-main);
-          }
-        }
-      }
-      .reslist {
-        display: flex;
-        align-items: center;
-        .mode {
-          display: flex;
-          border: 2px solid var(--color-main);
-          font-size: 22px;
-          padding: 2px;
-          border-radius: 20px;
-          position: relative;
-          cursor: pointer;
-          .buton {
-            background-color: var(--color-main);
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            position: absolute;
-          }
-        }
-
-        .list {
-          list-style: none;
-          display: flex;
-          .lii {
-            font-size: 22px;
-
-            padding: 0 20px;
-            cursor: pointer;
-            transition: 0.5s;
-          }
           .lii:hover {
             color: var(--color-main);
           }
@@ -140,9 +104,8 @@
           transform-origin: top left;
         }
       }
-    }
-  }
-}
+    
+  
 
 .footer {
   .boxfooter {
@@ -210,14 +173,10 @@
     width: 650px;
     .title {
       font-size: 56px;
-      /* background:linear-gradient(to bottom,var(--color-main),var(--color-icon));
-background-clip: text;
--webkit-text-fill-color: transparent;*/
     }
 
     .button {
       padding: 16px 38px;
-      /* margin: auto; */
       font-size: 20px;
       text-align: center;
       width: 247px;
@@ -227,9 +186,6 @@ background-clip: text;
       cursor: pointer;
       font-weight: bold;
       color: white;
-      /* -webkit-box-shadow:0px 0px 8px 0px rgba(0,0,0,0.9);
--moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.9);
-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.9); */
       transition: 0.5s;
     }
     .button:hover {

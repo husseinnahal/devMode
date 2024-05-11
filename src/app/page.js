@@ -46,6 +46,7 @@ export default function Home() {
             alt="ill"
             width={500}
             height={500}
+            priority
             className={styles.img}
           />
         </div>
