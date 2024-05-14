@@ -1,29 +1,48 @@
 "use client"
-import { createContext, useState } from "react";
+import { createContext,useEffect,useState } from "react";
 
 export const Themecontext=createContext();
 
 
 export default function Themcontext({children}){
-const [mode, setMode]=useState('dark');
-const [resbar,setResbar]=useState('bar');
-const [resdiv,setResdiv]=useState('lists');
+  const [resbar,setResbar]=useState('bar');
+  const [resdiv,setResdiv]=useState('lists');
 
 
+const [mode, setMode] = useState(localStorage.getItem('theme') || 'dark');
+
+useEffect(() => {
+    localStorage.setItem('theme', mode); 
+  }, [mode]);
+  
+  useEffect(() => {
+  if (localStorage.getItem('theme')==='dark') {
+
+    document.documentElement.style.setProperty('--background-header', 'linear-gradient(to left ,rgb(18, 17, 17),#0a0e34)');
+    document.documentElement.style.setProperty('--color-icon', '#bbb');
+    document.documentElement.style.setProperty('--chang-background', '#0d134b');
+
+  }else{
+    document.documentElement.style.setProperty('--background-header', 'linear-gradient(rgb(204, 219, 247),white)');
+    document.documentElement.style.setProperty('--color-icon', '#0d134b');
+    document.documentElement.style.setProperty('--chang-background', 'rgb(56, 198, 246)');
+  
+  }
+  },[])
 
     function toggle() {
         setMode(prev => prev === "light" ? "dark" : "light");
-
-        if (mode == "light") {
-            document.documentElement.style.setProperty('--background-header', 'linear-gradient(to left ,rgb(18, 17, 17),#0a0e34)');
-            document.documentElement.style.setProperty('--chang-background', '#0d134b');
-            document.documentElement.style.setProperty('--color-icon', '#bbb');
-        } else {
-            document.documentElement.style.setProperty('--background-header', 'linear-gradient(rgb(204, 219, 247),white)');
-            document.documentElement.style.setProperty('--chang-background', 'rgb(56, 198, 246)');
-            document.documentElement.style.setProperty('--color-icon', '#0d134b');
+    
+        if (mode==="light") {
+          document.documentElement.style.setProperty('--background-header', 'linear-gradient(to left ,rgb(18, 17, 17),#0a0e34)');
+    document.documentElement.style.setProperty('--color-icon', '#bbb');
+    document.documentElement.style.setProperty('--chang-background', '#0d134b');
+        }else{
+          document.documentElement.style.setProperty('--background-header', 'linear-gradient(rgb(204, 219, 247),white)');
+    document.documentElement.style.setProperty('--color-icon', '#0d134b');
+    document.documentElement.style.setProperty('--chang-background', 'rgb(56, 198, 246)');
+          
         }
-
     }
 
 
@@ -37,7 +56,7 @@ else{
   setResbar("bar");
   setResdiv("lists");
 }
-};
+}
 
 function pages() {
     setResbar("bar");
@@ -47,7 +66,7 @@ function pages() {
 
 
 return (
-    <Themecontext.Provider value={{ mode,toggle,resnav,resbar,resdiv,pages }}>
+    <Themecontext.Provider value={{ mode,toggle,resnav,resbar,resdiv,pages}}>
     <div className={` ${mode}`} >
 
     {children}

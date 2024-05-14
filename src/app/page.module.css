@@ -20,6 +20,7 @@
         align-items: center;
         .mode{
           display: flex;
+          gap: 1px;
           border: 2px solid var(--color-main);
           font-size: 22px;
           padding: 2px;
@@ -109,7 +110,7 @@
 
 .footer {
   .boxfooter {
-    background-color: var(--chang-background);
+background-color: var(--chang-background);
     .words {
       display: flex;
       justify-content: space-evenly;
@@ -176,7 +177,7 @@
     }
 
     .button {
-      padding: 16px 38px;
+      padding: 16px 0;
       font-size: 20px;
       text-align: center;
       width: 247px;
@@ -234,14 +235,14 @@
   .getstarted:hover {
     /* background: linear-gradient(270deg, rgba(2, 29, 78) 0%, rgba(31, 215, 232) 60%); */
     color: rgb(4, 4, 38);
-    border: 1px solid white;
+
   }
 }
 
 .up {
+  background-color: var(--chang-background);
   width: 50px;
   height: 50px;
-  background-color: var(--chang-background);
   -webkit-box-shadow: 0px 0px 124px 1px rgb(255, 255, 255);
   -moz-box-shadow: 0px 0px 124px 1px rgb(252, 255, 254);
   box-shadow: 0px 0px 124px 1px rgb(252, 255, 254);
@@ -258,9 +259,7 @@
     top: 8px;
   }
 }
-.up:hover {
-  background: linear-gradient(rgba(31, 215, 232, 0.873), rgb(0, 19, 54));
-}
+
 
 @media screen and (max-width: 1350px) {
   .mainheader {
@@ -384,41 +383,38 @@
 @media screen and (max-width: 900px) {
   .mainheader {
     max-width: 900px;
-
     .header {
       .clicks {
         .reslist {
           background: var(--background-header);
           position: absolute;
-          top: 13.5vh;
+          top: 99px;
           right: 0;
           width: 100%;
-          height: 90vh;
-          padding: 13px 0;
+          min-height: 89vh;
+          padding: 13px 0 20px 0;
           display: flex;
           flex-direction: column;
-          gap: 60px;
+          gap: 40px;
           transition: 0.7s;
           z-index: 90;
           .list {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 60px;
+            gap: 50px;
             .lii {
-              font-size: 33px;
+              font-size: 31px;
               transition: 0.3s;
             }
           }
         }
         .lists {
           position: absolute;
-          top: 13.5vh;
-          transition: 6s;
+          top: 99px;
           width: 0;
-          height: 90vh;
+          min-height: 89vh;
           padding: 13px 0;
-
           z-index: 90;
           .mode {
             display: none;
@@ -478,9 +474,10 @@
       font-size: 15px;
       text-align: center;
       width: 180px;
+ 
     }
     .title {
-      font-size: 4vw;
+      font-size: 4.5vw;
     }
   }
 
@@ -509,12 +506,31 @@
   }
 }
 @media screen and (max-width: 571px) {
+  .thefirst{
+
+.words{
+  .button {
+    padding:16px 0;
+    font-size: 18px;
+
+  }
+}
+  }
+
+  .buildsomething {
+    .getstarted {
+      padding: 10px 0;
+      font-size: 13px;
+      text-align: center;
+      width: 150px;
+    }
+  }
+
   .footer {
     .boxfooter {
       .words {
         justify-content: flex-start;
         gap: 50px;
-        /* background-color: aqua; */
         width: 70%;
 
         .line {
@@ -528,3 +544,46 @@
     }
   }
 }
+
+@media screen and (max-width: 410px){
+.mainheader{
+  .header {
+
+    .logo {
+.im{
+  width: 40px;
+  height: 40px;
+}
+.tit{
+font-size: 25px;
+}
+    }
+
+ .clicks{
+  .reslist {
+    background: var(--background-header);
+    position: absolute;
+    top: 89px;
+  }
+  .lists {
+    position: absolute;
+    top:89px;
+    transition: 0.5s;
+    width: 0;
+    }
+  
+  }
+  }
+}
+
+
+  .thefirst{
+
+    .words{
+      .button {
+        font-size: 17px;
+    width: 240px;
+      }
+    }
+      }
+} 

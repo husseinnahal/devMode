@@ -10,6 +10,7 @@ import Team from "./(static-page)/team/page";
 import styles from "./page.module.css";
 import Illustrion from "/public/images/ill.png";
 
+
 export default function Home() {
   const up = () => {
     window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
@@ -23,6 +24,8 @@ export default function Home() {
       }
     });
   });
+
+
 
   return (
     <main className={styles.main}>
@@ -59,13 +62,13 @@ export default function Home() {
       <div className={styles.buildsomething}>
         <h1 className={styles.title}>Lets Build Something Exception </h1>
         <Link href="/contact" className={styles.getstarted}>
-          Get Started{" "}
+          Get Started
         </Link>
       </div>
 
       <Contact />
 
-      <div className={styles.up} onClick={up}>
+      <div className={styles.up} onClick={up} >
         <div className={styles.toup}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -80,6 +83,8 @@ export default function Home() {
           </svg>
         </div>
       </div>
+
+
     </main>
   );
 }

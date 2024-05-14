@@ -36,19 +36,19 @@ a {
 
 
 .light{
-/* background:linear-gradient(rgba(79, 235, 249, 0.2),white); */
 background:linear-gradient(#d8e3fa,white);
-/* background: radial-gradient(ellipse, rgba(59, 122, 249, 0.2), transparent); */
 color:var(--color-dark);
-transition: 0.5s;
+transition: 0.5s all ease-in-out;
+
 min-height: 100vh;
 
 }
 
+
 .dark{
   background:linear-gradient(to left ,rgb(18, 17, 17),#0a0e34) ;
   color: var(--color-light);
-  transition: 0.5s;
+  transition: 0.5s all ease-in-out;
   min-height: 100vh;
 }
 

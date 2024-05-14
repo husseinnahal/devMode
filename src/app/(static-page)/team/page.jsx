@@ -6,11 +6,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import Image from "next/image";
-import Ali from "/public/images/ali.jpeg"
-
-
 import { Pagination } from 'swiper/modules';
+
 
 export default function Team() {
 
@@ -56,14 +53,13 @@ export default function Team() {
     </div>
     <p className={styles.para}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, impedit!</p>
   </div>
-    
         </SwiperSlide>
 
         <SwiperSlide className={styles.swiperslide}>
 
     <div className={styles.img}></div>
 
-  <div className={styles.desc}>
+    <div className={styles.desc}>
     <div className={styles.befor}>
     <h1 className={styles.name}>Hussein Nahhal</h1>
     <h3 className={styles.work}>Frontend Developer</h3>
@@ -77,7 +73,7 @@ export default function Team() {
 
     <div className={styles.img}></div>
 
-  <div className={styles.desc}>
+    <div className={styles.desc}>
     <div className={styles.befor}>
     <h1 className={styles.name}>Mhmd Houmani</h1>
     <h3 className={styles.work}>Mobile Application developer</h3>

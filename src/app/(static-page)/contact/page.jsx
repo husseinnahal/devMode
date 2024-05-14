@@ -30,7 +30,6 @@ export default function Contact() {
 
 
 
-
   return (
     <div className={styles.contact}>
   <div className={styles.desc}>
@@ -48,11 +47,13 @@ send us message today!</p>
   <form className={styles.inputs} onSubmit={submitt}>
 
 <input type="text" placeholder="Name" className={styles.inf}  value={form.Name} name='Name' required minLength={3}
+onChange={handle}  />
+
+<input type="email" placeholder="Email Address" className={styles.inf} value={form.Email} name='Email' required
 onChange={handle} />
-<input type="email" placeholder="Email Address"className={styles.inf} value={form.Email} name='Email' required
-onChange={handle} />
+
 <textarea placeholder="your message" className={styles.mess} value={form.Message} name='Message' required minLength={2}
-onChange={handle} ></textarea>
+onChange={handle}   ></textarea>
 
 <input type="submit" className={styles.send}/>
 

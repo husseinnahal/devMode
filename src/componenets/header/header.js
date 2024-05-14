@@ -17,8 +17,8 @@ const pathname = usePathname();
 <div className={styles.header} >
 
 <Link href='/'><div className={styles.logo}>
-<Image src={Logo} width={50} height={50} alt="logo" ></Image>
-  <h3>DevMode</h3>
+<Image src={Logo} width={50} height={50} alt="logo" className={styles.im} priority/>
+  <h3 className={styles.tit}>DevMode</h3>
   </div></Link>
 
 <div className={styles.clicks}> 

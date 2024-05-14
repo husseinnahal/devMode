@@ -33,7 +33,7 @@ export default function About() {
     <div className={styles.main} ref={elementRef}>
       <div className={styles.about} style={{ minHeight: `${pathname === '/about' ? "80vh" : "50vh"}` }}>
         <div className={clasimg} style={{ opacity: `${clasimg === "a" && pathname !== "/about" ? "0" : "1"}` }}>
-          <Image src={Illustration} width={500} height={420} className={styles.img} alt="about" />
+          <Image src={Illustration} width={500} height={420} className={styles.img} alt="about" priority/>
         </div>
         <div className={clas} style={{ opacity: `${clas === "a" && pathname !== "/about" ? "0" : "1"}` }}>
           <div className={styles.desc}>

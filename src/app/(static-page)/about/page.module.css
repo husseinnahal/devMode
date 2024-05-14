@@ -4,7 +4,6 @@ justify-content: space-evenly;
 align-items: center;
 flex-wrap: wrap;
 background: radial-gradient(ellipse, rgba(109, 155, 248, 0.2), transparent);
-
 .img{
     margin-bottom: 90px;
     
