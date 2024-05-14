@@ -15,8 +15,11 @@ useEffect(()=>{
 
 const [mode, setMode] = useState(()=>{
   if (typeof window !== 'undefined' && window.localStorage.theme !== "undefined") {
+    console.log(typeof(window.localStorage.theme));
+
     return localStorage.theme;
   } else {
+    console.log('else');
     return 'dark';
   }
   if(window.localStorage.theme!=="undefined") {
