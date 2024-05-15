@@ -1,8 +1,7 @@
 
 :root{
+  --background-mode:linear-gradient(to left ,rgb(18, 17, 17),#0a0e34);
  --color-main :#00cbf9;
---color-light:#bbb;
---color-dark: #0d134b;
 --background-header:linear-gradient(to left ,rgb(18, 17, 17),#0a0e34);
 --chang-background:#0d134b;
 --color-icon:#bbb;
@@ -35,19 +34,10 @@ a {
 }
 
 
-.light{
-background:linear-gradient(#d8e3fa,white);
-color:var(--color-dark);
-transition: 0.5s all ease-in-out;
 
-min-height: 100vh;
-
-}
-
-
-.dark{
-  background:linear-gradient(to left ,rgb(18, 17, 17),#0a0e34) ;
-  color: var(--color-light);
+.theme{
+  background:var(--background-mode) ;
+  color:var(--color-icon);
   transition: 0.5s all ease-in-out;
   min-height: 100vh;
 }

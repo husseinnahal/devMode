@@ -1,6 +1,7 @@
 "use client"
 import { createContext, useEffect, useState } from "react";
 
+import cookie from 'js-cookie';
 
 export const Themecontext=createContext();
 
@@ -8,41 +9,30 @@ export const Themecontext=createContext();
 export default function Themcontext({children}){
   const [resbar,setResbar]=useState('bar');
   const [resdiv,setResdiv]=useState('lists');
-
-useEffect(()=>{
-  window.localStorage.theme;
-},[])
-
-const [mode, setMode] = useState(()=>{
-  if (typeof window !== 'undefined' && window.localStorage.theme !== "undefined") {
-    console.log(typeof(window.localStorage.theme));
-
-    return localStorage.theme;
-  } else {
-    console.log('else');
-    return 'dark';
-  }
-  if(window.localStorage.theme!=="undefined") {
-    return localStorage.theme;
-  }else{  return 'dark'}}
-
-);
+  
+   const [mode, setMode] = useState(() => {
+    const savedTheme = cookie.get('theme');
+    return savedTheme || 'dark';
+  });
 
 useEffect(() => {
-    localStorage.theme=mode;
-  }, [mode]);
+  cookie.set('theme', mode, { expires: 7 });
+}, [mode]);
   
 
   useEffect(() => {
-  if (localStorage.getItem('theme')==='dark') {
-    document.documentElement.style.setProperty('--background-header', 'linear-gradient(to left ,rgb(18, 17, 17),#0a0e34)');
-    document.documentElement.style.setProperty('--color-icon', '#bbb');
-    document.documentElement.style.setProperty('--chang-background', '#0d134b');
-  }else{
+  if (cookie.get('theme') === 'light') {
+    document.documentElement.style.setProperty('--background-mode', 'linear-gradient(#d8e3fa,white)');
     document.documentElement.style.setProperty('--background-header', 'linear-gradient(rgb(204, 219, 247),white)');
     document.documentElement.style.setProperty('--color-icon', '#0d134b');
     document.documentElement.style.setProperty('--chang-background', 'rgb(56, 198, 246)');
-  
+
+  }else{
+    document.documentElement.style.setProperty('--background-mode', 'linear-gradient(to left ,rgb(18, 17, 17),#0a0e34)');
+    document.documentElement.style.setProperty('--background-header', 'linear-gradient(to left ,rgb(18, 17, 17),#0a0e34)');
+    document.documentElement.style.setProperty('--color-icon', '#bbb');
+    document.documentElement.style.setProperty('--chang-background', '#0d134b');
+
   }
   },[])
 
@@ -53,10 +43,14 @@ useEffect(() => {
           document.documentElement.style.setProperty('--background-header', 'linear-gradient(to left ,rgb(18, 17, 17),#0a0e34)');
     document.documentElement.style.setProperty('--color-icon', '#bbb');
     document.documentElement.style.setProperty('--chang-background', '#0d134b');
+    document.documentElement.style.setProperty('--background-mode', 'linear-gradient(to left ,rgb(18, 17, 17),#0a0e34)');
+
         }else{
           document.documentElement.style.setProperty('--background-header', 'linear-gradient(rgb(204, 219, 247),white)');
     document.documentElement.style.setProperty('--color-icon', '#0d134b');
     document.documentElement.style.setProperty('--chang-background', 'rgb(56, 198, 246)');
+    document.documentElement.style.setProperty('--background-mode', 'linear-gradient(#d8e3fa,white)');
+
           
         }
     }
@@ -82,8 +76,8 @@ function pages() {
 
 
 return (
-    <Themecontext.Provider value={{ mode,toggle,resnav,resbar,resdiv,pages}}>
-    <div className={` ${mode}`} >
+    <Themecontext.Provider value={{mode,toggle,resnav,resbar,resdiv,pages}}>
+    <div className={`theme`} >
 
     {children}
     
