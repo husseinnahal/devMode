@@ -28,6 +28,11 @@ export default function Contact() {
         else{
           setMess("Something went wrong.");
         }
+       
+        form.name="";
+        form.email="";
+        form.message="";
+
         }
         catch(err){
           setMess("Something went wrong.");
