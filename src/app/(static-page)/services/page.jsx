@@ -60,7 +60,7 @@ export default function Services() {
 
 
 <h3 className={styles.titlecard}>Programming Tutorials </h3>
-<p className={styles.para}>Comprehensive programming tutorials, designed to guide you from beginner to expert with ease. Whether you're looking to master the fundamentals or delve into advanced topics.</p>
+<p className={styles.para}>Comprehensive programming tutorials, designed to guide you from beginner to expert with ease. Whether you are looking to master the fundamentals or delve into advanced topics.</p>
 </div>
 <div className={styles.card} > 
 
@@ -124,7 +124,7 @@ export default function Services() {
 
 
 <h3 className={styles.titlecard}>Hosting Services </h3>
-<p className={styles.para}>Hosting solutions, tailored to meet your website's needs with speed, security, and scalability in mind. our hosting services ensure seamless performance </p>
+<p className={styles.para}>Hosting solutions, tailored to meet your website s needs with speed, security, and scalability in mind. our hosting services ensure seamless performance </p>
 </div>
 
 
