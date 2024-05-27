@@ -69,7 +69,9 @@ transition-duration: 0.5s;
 
 }
 
-
+.succes{
+    font-size: 14px;
+}
 .inf:focus , .mess:focus{
     outline:none;
     border-width: 2px;

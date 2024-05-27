@@ -61,15 +61,38 @@ font-size: 27px;
             }
         }
         }
-        .img{
-width: 185px;
-height: 185px;
-border-radius: 50%;
-z-index: 2;
-background-image: url("../../../../public/images/ali.jpeg");
-background-repeat: no-repeat;
-background-size:cover;
+        .aliimg{
+            width: 185px;
+            height: 185px;
+            border-radius: 50%;
+            z-index: 2;
+            background-image: url("../../../../public/images/ali.jpeg");
+            background-repeat: no-repeat;
+            background-size:cover;
+
+            
         }
+        .houmeneimg{
+            width: 185px;
+            height: 185px;
+            border-radius: 50%;
+            z-index: 2;
+            background-image: url("../../../../public/images/houmene.JPG");
+            background-repeat: no-repeat;
+            background-size:cover;
+        }
+
+          .husseinimg{
+            width: 185px;
+            height: 185px;
+            border-radius: 50%;
+            z-index: 2;
+            background-image: url("../../../../public/images/hussein.JPG");
+            background-repeat: no-repeat;
+            background-size:cover;
+
+
+          }
     .para{
         width: 93%;
         font-size: 14px;

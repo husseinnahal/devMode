@@ -44,7 +44,7 @@ font-size: 25px;
 }
 .para{
 text-align: center;
-font-size: 18px;
+font-size: 15px;
 }
 
 
@@ -93,7 +93,10 @@ width: 380px;
 .services{
     .card{
 width: 340px;
-
+.para{
+    
+    font-size: 13px;
+}
     }
 }
 }
@@ -111,9 +114,7 @@ padding: 10px;
 .titlecard{
     font-size: 21px;
     }
-    .para{
-    font-size: 17px;
-    }
+    
     }
 }
 }
@@ -132,7 +133,7 @@ padding: 8px;
     font-size: 18px;
     }
     .para{
-    font-size: 15px;
+    font-size: 13px;
     }
     }
 }
@@ -165,7 +166,7 @@ padding: 8px;
         font-size: 22px;
         }
         .para{
-        font-size: 16px;
+        font-size: 11px;
         }
         }
         padding-bottom: 15px;
@@ -185,7 +186,7 @@ padding: 8px;
         font-size: 18px;
         }
         .para{
-        font-size: 14px;
+        font-size: 11px;
         }
 .img{
     width: 62px;

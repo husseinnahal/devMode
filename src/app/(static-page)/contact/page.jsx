@@ -7,11 +7,12 @@ import styles from "./page.module.css";
 export default function Contact() {
 
   const [form,setForm]=useState({
-    Name:"",
-    Email:"",
-    Message:"",
+    name:"",
+    email:"",
+    message:"",
     });
 
+    const [mes,setMess]=useState('');
     
     function handle(e){
       setForm({...form,[e.target.name]:e.target.value})
@@ -20,10 +21,16 @@ export default function Contact() {
       async function submitt(e){
         e.preventDefault();
         try{
-        let res=await axios.post('https://devmodeapi.onrender.com/admin#',form);
-        console.log(res);
+        let res=await axios.post('https://devmodeapi.onrender.com/api/contacts',form);
+        if(res.status == 201){
+          setMess("Thank you, we've recieved your message!")
+        }
+        else{
+          setMess("Something went wrong.");
+        }
         }
         catch(err){
+          setMess("Something went wrong.");
         console.log(err);
         }
         };
@@ -46,14 +53,15 @@ send us message today!</p>
 <div className={styles.inputs}>
   <form className={styles.inputs} onSubmit={submitt}>
 
-<input type="text" placeholder="Name" className={styles.inf}  value={form.Name} name='Name' required minLength={3}
-onChange={handle}  />
+<input type="text" placeholder="Name" className={styles.inf}  value={form.name} name='name' required min={2} minLength={3}
+onChange={handle}  autoComplete="off" />
 
-<input type="email" placeholder="Email Address" className={styles.inf} value={form.Email} name='Email' required
-onChange={handle} />
+<input type="email" placeholder="Email Address" className={styles.inf} value={form.email} name='email' required
+onChange={handle} autoComplete="off" />
 
-<textarea placeholder="your message" className={styles.mess} value={form.Message} name='Message' required minLength={2}
-onChange={handle}   ></textarea>
+<textarea placeholder="your message" className={styles.mess} value={form.message} name='message' required  minLength={2}
+onChange={handle}  ></textarea>
+<p className={styles.succes}>{mes}</p>
 
 <input type="submit" className={styles.send}/>
 

@@ -8,7 +8,6 @@ import 'swiper/css/pagination';
 
 import { Pagination } from 'swiper/modules';
 
-
 export default function Team() {
 
 
@@ -44,41 +43,39 @@ export default function Team() {
       >
         <SwiperSlide className={styles.swiperslide}>
 
-    <div className={styles.img}></div>
+          <div  className={styles.aliimg}   > </div>
 
   <div className={styles.desc}>
     <div className={styles.befor}>
     <h1 className={styles.name}>Ali Hazer</h1>
     <h3 className={styles.work}>Backend Developer</h3>
     </div>
-    <p className={styles.para}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, impedit!</p>
+    <p className={styles.para}>Expert in creating robust and scalable server-side solutions for web applications.</p>
   </div>
         </SwiperSlide>
 
         <SwiperSlide className={styles.swiperslide}>
-
-    <div className={styles.img}></div>
-
-    <div className={styles.desc}>
-    <div className={styles.befor}>
-    <h1 className={styles.name}>Hussein Nahhal</h1>
-    <h3 className={styles.work}>Frontend Developer</h3>
-    </div>
-    <p className={styles.para}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, impedit!</p>
-  </div>
+        <div  className={styles.husseinimg}   > </div>
+        
+     <div className={styles.desc}>
+            <div className={styles.befor}>
+              <h1 className={styles.name}>Hussein Nahhal</h1>
+              <h3 className={styles.work}>Frontend Developer</h3>
+            </div>
+            <p className={styles.para}>specialist in crafting visually stunning and highly interactive user interfaces</p>
+          </div>
     
         </SwiperSlide>
 
         <SwiperSlide className={styles.swiperslide}>
 
-    <div className={styles.img}></div>
-
-    <div className={styles.desc}>
-    <div className={styles.befor}>
-    <h1 className={styles.name}>Mhmd Houmani</h1>
+        <div className={styles.houmeneimg}></div>
+        <div className={styles.desc}>
+          <div className={styles.befor}>
+          <h1 className={styles.name}>Mhmd Houmani</h1>
     <h3 className={styles.work}>Mobile Application developer</h3>
     </div>
-    <p className={styles.para}>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, impedit!</p>
+    <p className={styles.para}>Specialist in creating high-performance mobile applications with stunning UI and seamless functionality.</p>
   </div>
     
         </SwiperSlide>

@@ -60,7 +60,7 @@ export default function Services() {
 
 
 <h3 className={styles.titlecard}>Programming Tutorials </h3>
-<p className={styles.para}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, reprehenderit.</p>
+<p className={styles.para}>Comprehensive programming tutorials, designed to guide you from beginner to expert with ease. Whether you're looking to master the fundamentals or delve into advanced topics.</p>
 </div>
 <div className={styles.card} > 
 
@@ -79,7 +79,7 @@ export default function Services() {
 
 
 <h3 className={styles.titlecard}>Web Development </h3>
-<p className={styles.para}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, reprehenderit.</p>
+<p className={styles.para}>Creating custom, responsive websites tailored to meet your unique business needs. From concept to launch, we ensure a seamless user experience with cutting-edge design and functionality.</p>
 </div>
 <div className={styles.card} > 
 
@@ -109,7 +109,7 @@ export default function Services() {
 
 
 <h3 className={styles.titlecard}>Code Reviews </h3>
-<p className={styles.para}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, reprehenderit.</p>
+<p className={styles.para}>Our experienced team meticulously examines your codebase, providing actionable feedback and suggestions to improve readability, performance, and maintainability.</p>
 </div>
 <div className={styles.card} > 
 
@@ -124,7 +124,7 @@ export default function Services() {
 
 
 <h3 className={styles.titlecard}>Hosting Services </h3>
-<p className={styles.para}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, reprehenderit.</p>
+<p className={styles.para}>Hosting solutions, tailored to meet your website's needs with speed, security, and scalability in mind. our hosting services ensure seamless performance </p>
 </div>
 
 
