@@ -196,4 +196,45 @@ padding: 8px;
     }
     }
     }
+@media screen and (max-width:340px){
+        .main{
+    
+        .ourservices{
+    
+            .title{
+             font-size:27px;
+            }
 
+            
+        
+        }
+        }
+        }
+
+ @media screen and (max-width:284px){
+            .main{
+        
+            .ourservices{
+        
+                .title{
+                 font-size:22px;
+                }
+            .services{
+                .card{
+        
+            .titlecard{
+                font-size: 15px;
+          
+                }
+                .para{
+                font-size: 10px;
+                }
+        .img{
+            width: 57px;
+        }
+                }
+            }
+            }
+            }
+            }
+    

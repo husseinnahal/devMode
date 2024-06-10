@@ -22,13 +22,7 @@ export default function Contact() {
         e.preventDefault();
         try{
         let res=await axios.post('https://devmodeapi.onrender.com/api/contacts',form);
-        if(res.status == 201){
           setMess("Thank you, we've recieved your message!")
-        }
-        else{
-          setMess("Something went wrong.");
-        }
-       
         form.name="";
         form.email="";
         form.message="";
@@ -37,6 +31,7 @@ export default function Contact() {
         catch(err){
           setMess("Something went wrong.");
         console.log(err);
+
         }
         };
 
@@ -56,6 +51,7 @@ send us message today!</p>
 
 
 <div className={styles.inputs}>
+
   <form className={styles.inputs} onSubmit={submitt}>
 
 <input type="text" placeholder="Name" className={styles.inf}  value={form.name} name='name' required min={2} minLength={3}
