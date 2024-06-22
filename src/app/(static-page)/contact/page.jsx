@@ -4,6 +4,8 @@ import { useState } from "react";
 import styles from "./page.module.css";
 
 
+
+
 export default function Contact() {
 
   const [form,setForm]=useState({
@@ -13,6 +15,7 @@ export default function Contact() {
     });
 
     const [mes,setMess]=useState('');
+    const [disabl,setDisabl]=useState(false);
     
     function handle(e){
       setForm({...form,[e.target.name]:e.target.value})
@@ -21,11 +24,13 @@ export default function Contact() {
       async function submitt(e){
         e.preventDefault();
         try{
-        let res=await axios.post('https://devmodeapi.onrender.com/api/contacts',form);
-          setMess("Thank you, we've recieved your message!")
-        form.name="";
-        form.email="";
-        form.message="";
+         setDisabl(true);
+         let res=await axios.post('https://devmodeapi.onrender.com/api/contacts',form);
+         setMess("Thank you, we've recieved your message!");
+
+         setForm({...form,name:"",email:"",message:" "});
+         setDisabl(false);
+       
 
         }
         catch(err){
@@ -64,7 +69,7 @@ onChange={handle} autoComplete="off" />
 onChange={handle}  ></textarea>
 <p className={styles.succes}>{mes}</p>
 
-<input type="submit" className={styles.send}/>
+<input type="submit" disabled={disabl} className={styles.send}/>
 
 </form>
 

@@ -5,6 +5,8 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./page.module.css";
 import Illustration from "/public/images/cm.png";
 
+
+
 export default function About() {
   const pathname = usePathname();
   const [clas, setClas] = useState("a");

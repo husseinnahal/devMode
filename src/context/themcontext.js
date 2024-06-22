@@ -77,6 +77,7 @@ function pages() {
 
 return (
     <Themecontext.Provider value={{mode,toggle,resnav,resbar,resdiv,pages}}>
+      {/*  w fina kmn nst3mel ew nb3at la commponent tene l  l function tb3 l state for example  setmode  */}
     <div className={`theme`} >
 
     {children}

@@ -11,10 +11,11 @@ import styles from "./page.module.css";
 import Illustrion from "/public/images/ill.png";
 
 
+
 export default function Home() {
   const up = () => {
     window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
-  };
+  }
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 300) {
